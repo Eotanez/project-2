@@ -1,1 +1,1 @@
-web: gunicorn gun_violence_project_2.app:app
+web: gunicorn gun-violence-project-2.app:app
