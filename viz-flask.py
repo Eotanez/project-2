@@ -15,9 +15,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from sqlalchemy import inspect
 
+#create database path
+database_path= "sqlite-data/project-2.db"
+
 # create engine to our data file
-# refuses to read the file unless it's in the same dir, for some reason
-engine = create_engine("sqlite:///project-2.db")
+engine = create_engine(f"sqlite:///{database_path}")
 
 # reflect an existing database into a new model
 Base = automap_base()
